@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+}
+
+nav {
+  height: 80px;
+  background-color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_content {
+  width: 1080px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spotify-logo {
+  filter: invert(1);
+  height: 42px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0 18px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.menu a:hover {
+  color: #1ed760;
+}
+.right-border {
+  border-right: 1px solid white;
+}
