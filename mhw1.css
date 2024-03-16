@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: Inter, sans-serif;
   font-size: 16px;
+  background-color: #121212;
 }
 
 nav {
@@ -37,6 +38,87 @@ nav {
 .menu a:hover {
   color: #1ed760;
 }
-.right-border {
-  border-right: 1px solid white;
+
+header {
+  height: 50vh;
+  background-image: url(public/desktop-album-evergreen-1x.png);
+  background-repeat: no-repeat;
+  background-position: right;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.header-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 70%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  z-index: -1;
+}
+.header_content {
+  background-color: #1ed75f67;
+
+  width: 1080px;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+.premium-plan {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.premium-plan_content {
+  width: 720px;
+  height: 80%;
+  background-color: #00ff59;
+}
+
+.bills {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bills_content {
+  height: 100%;
+  width: 1080px;
+  background-color: #80ffac;
+}
+
+.faq {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.faq_content{
+  background-color: #203c2a;
+  width: 1080px;
+  height: 80%;
+}
+
+footer{
+  background-color: #58ff92;
+  height: 61vh;
+}
+
+
