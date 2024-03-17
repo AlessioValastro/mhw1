@@ -41,14 +41,20 @@ nav {
 
 header {
   height: 50vh;
-  background-image: url(public/desktop-album-evergreen-1x.png);
-  background-repeat: no-repeat;
-  background-position: right;
   position: relative;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+header img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 823px;
+  width: 65%;
+
+  z-index: -1;
 }
 .header-overlay {
   position: absolute;
@@ -56,8 +62,12 @@ header {
   width: 100%;
   top: 0;
   right: 0;
-  background: linear-gradient(0deg, rgba(255,210,215,0)79%, rgba(255, 210, 215, 0.6) 100%);
-  z-index: -1;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 210, 215, 0) 79%,
+    rgba(255, 210, 215, 0.6) 100%
+  );
+  z-index: -2;
 }
 .header_content {
   color: white;
@@ -80,27 +90,31 @@ header {
   font-weight: 400;
   margin: 0 0 5px 0;
 }
-.content_text-buttons{
+.content_text-buttons {
   display: flex;
   justify-content: flex-start;
   padding: 30px 0 25px;
 }
-#button-1{
+#button-1 {
   font-size: 0.9rem;
   font-weight: 600;
-  background-color: #FFD2D7;
+  background-color: #ffd2d7;
   color: black;
   text-decoration: none;
   border-radius: 2rem;
   margin-right: 15px;
   width: 223px;
   height: 48px;
+  padding: 0 10px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#button-2{
+#button-1:hover {
+  background-color: white;
+}
+#button-2 {
   font-size: 0.9rem;
   font-weight: 600;
   border: 1px solid white;
@@ -115,17 +129,13 @@ header {
   justify-content: center;
 }
 
-#disclaimer{
-  font-size: .65rem;
+#disclaimer {
+  font-size: 0.65rem;
   line-height: 1rem;
   width: 65%;
 }
-#disclaimer a{
+#disclaimer a {
   color: white;
-}
-
-section {
-  margin-top: 2rem;
 }
 
 .premium-plan {
@@ -136,9 +146,80 @@ section {
   align-items: center;
 }
 .premium-plan_content {
+  color: white;
   width: 720px;
-  height: 80%;
-  background-color: #00ff59;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.premium-plan_content h2 {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+}
+.premium-plan_content-info {
+  margin-top: 0;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.premium-plan_content-box {
+  width: 80%;
+}
+.premium-plan_box-first-row {
+  height: 80px;
+  border-bottom: 1px solid white;
+  padding: 0 30px 0 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  font-weight: 600;
+}
+.row_what {
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+.row_free {
+  margin-left: 95px;
+}
+.row_premium {
+  display: flex;
+  align-items: center;
+}
+.row_premium img {
+  filter: invert(1);
+  height: 20px;
+  margin-right: 5px;
+}
+.premium-plan_box-row {
+  height: 80px;
+  border-bottom: 1px solid white;
+  padding-right: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.premium-plan_box-row:hover {
+  background-color: rgba(255, 255, 255, 0.038);
+}
+
+.premium-plan_box-row p {
+  width: 30%;
+  font-size: 0.9rem;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(255, 255, 255, 0.541);
+  line-height: 24px;
+  margin-left: 10px;
+}
+.checked {
+  height: 30px;
 }
 
 .bills {
@@ -167,6 +248,105 @@ section {
 }
 
 footer {
-  background-color: #58ff92;
+  background-color: #000000;
+  color: white;
   height: 61vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #1ed760;
+}
+.footer_content {
+  margin-top: 50px;
+  width: 1200px;
+  height: 80%;
+}
+.footer_content-top {
+  width: 100%;
+  height: 80%;
+  position: relative;
+  display: flex;
+}
+.footer_top-left {
+  height: 100%;
+  width: 70%;
+  display: flex;
+}
+.footer_left-column {
+  height: 100%;
+  width: 20%;
+  padding: 0 10px;
+  margin-right: 5px;
+}
+.footer_left-column img {
+  filter: invert(1);
+  width: 90%;
+}
+.footer_left-column h3 {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.7rem;
+
+  margin-top: 20px;
+}
+.footer_left-column a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: block;
+  margin: 22px 0;
+}
+.footer_top-right {
+  width: 20%;
+  padding-top: 10px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+.footer_top-right img {
+  height: 25px;
+  padding: 15px;
+  margin-left: 10px;
+
+  background-color: #222326;
+  border-radius: 100%;
+}
+#region {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+#region img {
+  margin-right: 7px;
+}
+#region a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.7rem;
+}
+.footer_content-bottom {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.footer_content-bottom a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.72rem;
+  margin-right: 20px;
+}
+#spotify-ab {
+  position: absolute;
+  right: 0;
+
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.72rem;
 }
