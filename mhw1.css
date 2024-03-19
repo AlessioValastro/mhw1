@@ -223,28 +223,198 @@ header img {
 }
 
 .bills {
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .bills_content {
+  color: white;
   height: 100%;
-  width: 1080px;
-  background-color: #80ffac;
+  width: 1200px;
 }
-
-.faq {
-  height: 75vh;
+.bills_content-intro {
+  width: 100%;
+  text-align: center;
+}
+.bills_content-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+.bills_content-intro p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+.bills_content-info {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.bills_content-info h3 {
+  font-size: 1.8rem;
+}
+
+.bills_info-list li {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: -5px;
+}
+.bills_info-list img {
+  filter: invert(1);
+  height: 30px;
+  margin-right: 2px;
+}
+.bills_content-plans {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  padding: 30px 0;
+}
+.bills_plans-plan {
+  background-color: rgb(36, 36, 36);
+  width: 320px;
+  height: 500px;
+  padding: 15px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.bills_plan-free {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px 20px;
+  background-color: rgb(255, 210, 215);
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  border-radius: 0 0 7px 0;
+}
+.bills_plan-head {
+  margin-top: 35px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.222);
+}
+.bills_head-premium {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.bills_head-premium img {
+  filter: invert(1);
+}
+.bills_plan-head h4 {
+  font-size: 2rem;
+  color: rgb(255, 210, 215);
+  margin: 20px 0;
+}
+.bills_plan-head p {
+  font-size: 0.95rem;
+}
+.bills_head-thin {
+  color: #ffffff91;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.bills_plan-tail ul {
+  margin-top: 0;
+  padding: 19px;
+}
+.bills_plan-tail li {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+}
+.bills_plan-tail a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: block;
+  width: 100%;
+  background-color: rgb(255, 210, 215);
+  border-radius: 20px;
+  text-align: center;
+  padding: 14px 0;
+}
+.bills_plan-tail p {
+  color: #ffffff91;
+  text-align: center;
+  font-size: 0.7rem;
+  margin-top: 15px;
+}
+.underline {
+  text-decoration: underline;
+}
+
+.faq {
+  min-height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
 .faq_content {
-  background-color: #203c2a;
+  color: white;
   width: 1080px;
   height: 80%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.faq_content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.faq_content p {
+  font-size: 0.9rem;
+}
+.faq_content a {
+  color: white;
+}
+.faq_content-qa {
+  margin-top: 10px;
+  width: 100%;
+  flex-grow: 1;
+
+  padding: 10px;
+}
+.faq_qa-block {
+  color: white;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.1);
+  background-color: rgba(112, 112, 112, 0.199);
+}
+.faq_qa-block h3 {
+  font-size: 1.05rem;
+  padding: 19px;
+  background-color: rgba(86, 86, 86, 0.3);
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 2px 0;
+}
+
+.faq_qa-block p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  padding: 10px 25px;
 }
 
 footer {
@@ -254,6 +424,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin-top: 60px;
 }
 footer a {
   color: white;
